@@ -28,3 +28,9 @@ Resources:
             ApiId: !Ref Api
             Path: /
             Method: get
+
+Outputs:
+  ApiURL:
+    Value: !Sub 'https://${Api}.execute-api.${AWS::Region}.${AWS::URLSuffix}'
+    Export:
+      Name: ApiURL
